@@ -1,0 +1,28 @@
+<h1 [routerLink]="['']"> ← back to list</h1>
+
+<form [formGroup]="manageModel.formGroup">
+  <div class="container">
+    <div class="row">
+      <input type="text" placeholder="name" formControlName="name">
+      <textarea formControlName="description" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="row">
+      <app-author formControlName="author"></app-author>
+    </div>
+    <div class="row">
+      <app-contents formControlName="contents"></app-contents>
+    </div>
+    <div class="row">
+      <app-plans formControlName="plans"></app-plans>
+    </div>
+    <div class="row">
+      <app-duration formControlName="duration"></app-duration>
+    </div>
+    <div class="row">
+      <app-sales formControlName="sales"></app-sales>
+    </div>
+  </div>
+</form>
+
+
+<button *ngIf="mode === ManageTypeEnum.ADD" (click)="save()">Save</button>

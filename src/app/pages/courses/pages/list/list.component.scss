@@ -1,0 +1,19 @@
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 20px;
+}
+
+thead {
+  font-weight: bold;
+}
+
+button  {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}

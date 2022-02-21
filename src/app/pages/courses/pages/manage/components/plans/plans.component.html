@@ -1,0 +1,16 @@
+<div class="container">
+  <ng-container *ngFor="let form of formGroups">
+    <form [formGroup]="form">
+      <div class="row">
+        <input type="text" placeholder="Name" formControlName="name">
+        <input type="number" placeholder="Price" formControlName="price">
+      </div>
+      <div class="row">
+        <app-advantages formControlName="advantages"></app-advantages>
+      </div>
+    </form>
+  </ng-container>
+  <div class="add">
+    <span (click)="createNewFormGroup()">+</span>
+  </div>
+</div>

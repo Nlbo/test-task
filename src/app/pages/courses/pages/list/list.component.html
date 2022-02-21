@@ -1,0 +1,29 @@
+<table>
+  <thead>
+  <tr>
+    <td>Course Name</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Contents</td>
+    <td>Sales Range</td>
+    <td>
+      <button [routerLink]="['', 'courses', ManageTypeEnum.ADD]">
+        +Add
+      </button>
+    </td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let course of courses$ | async">
+    <td>{{course.name}}</td>
+    <td>{{course.author.firstName}}</td>
+    <td>{{course.author.lastName}}</td>
+    <td>{{course.contents[0]?.name}}</td>
+    <td>{{course.sales?.start | date}} - {{course.sales?.end | date}}</td>
+    <td>
+      <button [routerLink]="['', 'courses', ManageTypeEnum.PREVIEW, course.id]">Preview</button>
+      <button [routerLink]="['', 'courses', ManageTypeEnum.EDIT, course.id]" class="ml-5">Edit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

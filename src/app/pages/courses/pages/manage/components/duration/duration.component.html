@@ -1,0 +1,13 @@
+<div class="container">
+  <form [formGroup]="formGroup">
+    <div class="row">
+      <input type="text" placeholder="Value" formControlName="value">
+      <select formControlName="unit">
+        <option [value]="DurationUnit.day" label="Day"></option>
+        <option [value]="DurationUnit.hour" label="Hour"></option>
+        <option [value]="DurationUnit.month" label="Month"></option>
+        <option [value]="DurationUnit.week" label="week"></option>
+      </select>
+    </div>
+  </form>
+</div>

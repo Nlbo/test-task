@@ -1,0 +1,16 @@
+<div class="container">
+  <ng-container *ngFor="let form of formGroups">
+    <form [formGroup]="form">
+      <div class="row">
+        <input type="checkbox" placeholder="Name" formControlName="name">
+        <select formControlName="type">
+          <option [value]="ContentsItemType.stream" label="Stream"></option>
+          <option [value]="ContentsItemType.lesson" label="Lesson"></option>
+        </select>
+      </div>
+    </form>
+  </ng-container>
+  <div class="add">
+    <span (click)="createNewFormGroup()">+</span>
+  </div>
+</div>
